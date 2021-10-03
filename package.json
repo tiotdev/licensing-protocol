@@ -1,0 +1,32 @@
+{
+  "name": "truvvl-protocol",
+  "version": "1.0.0",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "deployRopstenTestnet": "rm -r build && truffle migrate --network ropsten",
+    "deploy": "rm -r build && truffle migrate",
+    "test": "truffle test",
+    "dev": "cd client && npm run dev",
+    "prettier": "prettier --write '**/*.js'",
+    "prettiersol": "prettier --write 'contracts/**/*.sol'",
+    "verify": "truffle run verify Factory Market License@0x000 --network ropsten"
+  },
+  "author": "Julian Peters",
+  "license": "BUSL-1.1",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "truffle": "^5.4.11",
+    "truffle-plugin-verify": "^0.5.15"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.2.0",
+    "@uniswap/lib": "^4.0.1-alpha",
+    "truffle-contract-size": "^2.0.1"
+  }
+}
